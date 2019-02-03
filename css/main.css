@@ -1,0 +1,70 @@
+
+.board {
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "title"
+    "category"
+    "100"
+    "200"
+    "300"
+    "400"
+    "500"
+  ;
+}
+
+.title {
+  color: red;
+  text-align: center;
+  grid-area: "title";
+}
+.topic{
+  grid-area: "category";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "t1 t2 t3 t4 t5 t6";
+}
+.v100 {
+  grid-area: "100";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "a1 a2 a3 a4 a5 a6";
+}
+.v200 {
+  grid-area: "200";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "b1 b2 b3 b4 b5 b6";
+}
+.v300 {
+  grid-area: "300";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "c1 c2 c3 c4 c5 c6";
+}
+.v400 {
+  grid-area: "400";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "d1 d2 d3 d4 d5 d6";
+}
+.v500 {
+  grid-area: "500";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "e1 e2 e3 e4 e5 e6";
+}
