@@ -1,18 +1,32 @@
 
 .board {
-  border: 2px solid blue;
+  border: 10px solid black;
+  background-color: blue;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "title"
     "category"
-    "100"
-    "200"
-    "300"
-    "400"
-    "500"
+    "v100"
+    "v200"
+    "v300"
+    "v400"
+    "v500"
   ;
+}
+.topic-row {
+  border-top: 2px solid black;
+  border-bottom: 5px solid black;
+  border-right: 2px solid black;
+  text-align: center;
+}
+.table-row {
+  border-top: 5px solid black;
+  text-align: center;
+}
+.cell {
+  border-right: 2px solid black;
 }
 
 .title {
@@ -28,6 +42,8 @@
   grid-template-areas:
   "t1 t2 t3 t4 t5 t6";
 }
+
+
 .v100 {
   grid-area: "100";
   display: grid;
