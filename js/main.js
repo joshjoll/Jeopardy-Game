@@ -164,7 +164,7 @@ var topics = {
   },
 };
 
-console.log(topics.HTMLTags.v100.q1.a);
+console.log(topics.HTMLTags);
 // app's state variables
 
 // cached element references
@@ -172,8 +172,26 @@ console.log(topics.HTMLTags.v100.q1.a);
 // event listeners
 
 document.getElementById('play').addEventListener('click', removeOptions);
+document.getElementsByClassName('cell')[0].addEventListener('click', revealAnswer);
 
 // functions
+
+function revealAnswer(evt) {
+  console.log(evt.target);
+  evt.target.style.display = "none"
+}
+
+// function revealAnswer() {
+//   this.getElementsByClassName('value')[0].style.display = 'none';
+//   this.getElementsByClassName('answer')[0].style.display = 'inline';
+//   this.addEventListener('click', function() {
+//     this.getElementsByClassName('answer')[0].style.display = 'none';
+//     this.getElementsByClassName('question')[0].style.display = 'inline';
+//     this.addEventListener('click', function() {
+//       this.getElementsByClassName('question')[0].style.display = 'none';
+//     });
+//   });
+// }
 
 function removeOptions() {
   document.querySelector('div').style.display = 'none';

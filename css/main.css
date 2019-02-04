@@ -87,6 +87,14 @@
 .value {
   color: rgb(187, 193, 84);
 }
+.answer {
+  color: white;
+  display: none;
+}
+.question {
+  color: white;
+  display: none;
+}
 
 .topic{
   grid-area: "category";
