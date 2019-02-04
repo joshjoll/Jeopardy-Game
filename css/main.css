@@ -4,7 +4,7 @@
 
 .optionPage {
   position: fixed;
-
+  display: ;
   width: 100%;
   height: 100%;
   top: 0;
@@ -89,10 +89,13 @@
 }
 .answer {
   color: white;
+  align-items: center;
+  text-align: center;
   display: none;
 }
 .question {
   color: white;
+  align-items: center;
   display: none;
 }
 
