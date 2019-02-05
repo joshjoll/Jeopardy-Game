@@ -2,9 +2,9 @@
   box-sizing: border-box;
 }
 
-.optionPage {
+#optionPage {
   position: fixed;
-  display: ;
+  display:;
   width: 100%;
   height: 100%;
   top: 0;
