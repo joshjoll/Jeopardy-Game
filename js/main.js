@@ -193,11 +193,15 @@ document.querySelector('section').addEventListener('click', pushTopic);
 //   Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page.*/.length
 // }
 
-//pushes the selected topic to the chosenTopics array
+//pushes the selected topic to the chosenTopics array. Limits to 6 catgories
 function pushTopic(evt) {
   console.log(evt.target);
-  chosenTopics.push(evt.target.textContent);
-  console.log(chosenTopics);
+  if (chosenTopics.length < 6) {
+    chosenTopics.push(evt.target.textContent);
+    console.log(chosenTopics.length);
+  } else {
+    alert(`You've selected 6 categories. Let's Play`)
+  }
 }
 
   //changes from value to answer to question when clicked. want to add margin/padding to the text in cells so it can be clicked anywhere in cell
@@ -225,5 +229,9 @@ funFun();
 
 //gives functionality to the "Let's play" button on the options page. May need to add alert that requires chosenTopics.length === 6
 function removeOptions() {
+  if (chosenTopics.length === 6) {
   document.querySelector('div').style.display = 'none';
+  } else {
+    alert(`Please select 6 categories`)
+  }
 }
