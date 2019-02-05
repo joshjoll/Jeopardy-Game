@@ -1,143 +1,40 @@
 //const
 
 const topics = [
-  HTMLTags = {
-    v100: {
-      q1: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$100',
-      },
-      q2: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$200',
-      },
-      q3: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$300',
-      },
-      q4: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$400',
-      },
-      q5: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$500',
-      },
-    },
-    v200: {
-      q1: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$100',
-      },
-      q2: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$200',
-      },
-      q3: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$300',
-      },
-      q4: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$400',
-      },
-      q5: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$500',
-      },
-    },
-    v300: {
-      q1: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$100',
-      },
-      q2: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$200',
-      },
-      q3: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$300',
-      },
-      q4: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$400',
-      },
-      q5: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$500',
-      },
-    },
-    v400: {
-      q1: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$100',
-      },
-      q2: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$200',
-      },
-      q3: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$300',
-      },
-      q4: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$400',
-      },
-      q5: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$500',
-      },
-    },
-    v500: {
-      q1: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$100',
-      },
-      q2: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$200',
-      },
-      q3: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$300',
-      },
-      q4: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$400',
-      },
-      q5: {
-        a: 'A self closing tag',
-        q: 'what is <img>?',
-        value: '$500',
-      },
-    },
+  {topic: HTMLTags,
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
   },
+  {topic: HTMLTags,
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  {topic: HTMLTags,
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  {topic: HTMLTags,
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  {topic: HTMLTags,
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  {topic: HTMLTags,
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  
+
+
+
   CSSProperties = {
 
   },
