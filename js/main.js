@@ -137,7 +137,6 @@ const topics = {
         value: '$500',
       },
     },
-
   },
   CSSProperties: {
 
@@ -198,10 +197,12 @@ document.querySelector('section').addEventListener('click', pushTopic);
 //   Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page.*/.length
 // }
 
-function render() {
-  for (let i = 0; i < chosenTopics.length; i++) {
+function createChoices() {
+  for (let i = 0; i < topics)
+}
 
-  }
+function render() {
+
 }
 
 //needs completely retweaked, but worked
@@ -219,6 +220,7 @@ funFun();
 function pushTopic(evt) {
   if (chosenTopics.length < 6) {
     chosenTopics.push(evt.target.textContent);
+    evt.target.style.border = '1px solid pink';
     let i = chosenTopics.length;
     document.getElementById('t' + i).textContent = evt.target.textContent;
   } else {
