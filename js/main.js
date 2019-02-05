@@ -1,7 +1,7 @@
 //const
 
-const topics = {
-  HTMLTags: {
+const topics = [
+  HTMLTags = {
     v100: {
       q1: {
         a: 'A self closing tag',
@@ -138,30 +138,29 @@ const topics = {
       },
     },
   },
-  CSSProperties: {
+  CSSProperties = {
 
   },
-  arrays: {
+  arrays = {
 
   },
-  typeof: {
+  harry = {
 
   },
-  gitHub: {
+  gitHub = {
 
   },
-  loops: {
+  loops = {
 
   },
-  jsFunctions: {
+  jsFunctions = {
 
   },
-  jquery: {
+  jquery = {
 
   },
-};
+];
 
-console.log(topics.HTMLTags.v100.childNodes);
 
 const ids = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6'];
 
@@ -197,28 +196,39 @@ document.querySelector('section').addEventListener('click', pushTopic);
 //   Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page.*/.length
 // }
 
+
+  // should push all first level objects in topics array and create button on the options screen
 function createChoices() {
-  for (let i = 0; i < topics)
+  for (let i = 0; i < topics.length; i++) {
+    console.log(topics[i]);
+    var newDiv = document.createElement('DIV');
+    var newTopic = document.createTextNode(topics[i]);
+    newDiv.appendChild(newTopic);
+    document.querySelector('section').appendChild(newDiv).classList.add('choices');
+  }
 }
+createChoices();
 
 function render() {
 
 }
 
 //needs completely retweaked, but worked
-function funFun() {
-  for (let i = 0; i < ids.length; i++) {
-    //add childElement to assign value?
-    document.getElementById(ids[i]).children[0].innerHTML = topics.HTMLTags.v100.q1.value; /*need to replace this with a var/method */
-
-    // document.querySelector('#ids[i]').innerHTML = topics.HTMLTags.v100.q1.value;
-  }
-}
-funFun();
+// function funFun() {
+//   for (let i = 0; i < ids.length; i++) {
+//     //add childElement to assign value?
+//     document.getElementById(ids[i]).children[0].innerHTML = topics.HTMLTags.v100.q1.value; /*need to replace this with a var/method */
+//
+//     // document.querySelector('#ids[i]').innerHTML = topics.HTMLTags.v100.q1.value;
+//   }
+// }
+// funFun();
 
   //pushes the selected topic to the chosenTopics array. Limits to 6 catgories
 function pushTopic(evt) {
-  if (chosenTopics.length < 6) {
+  if (evt.target.style.border == '1px solid pink') {
+    alert(`Please do not select the same topic twice`)
+  } else if (chosenTopics.length < 6) {
     chosenTopics.push(evt.target.textContent);
     evt.target.style.border = '1px solid pink';
     let i = chosenTopics.length;
