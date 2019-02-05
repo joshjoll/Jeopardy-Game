@@ -184,7 +184,7 @@ document.getElementById('play').addEventListener('click', removeOptions);
 document.getElementsByClassName('board')[0].addEventListener('click', revealAnswer);
 
   //only works on first topic
-document.getElementById('choices').addEventListener('click', pushTopic);
+document.querySelector('section').addEventListener('click', pushTopic);
 
 // functions
 
@@ -193,6 +193,14 @@ document.getElementById('choices').addEventListener('click', pushTopic);
 //   Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page.*/.length
 // }
 
+//pushes the selected topic to the chosenTopics array
+function pushTopic(evt) {
+  console.log(evt.target);
+  chosenTopics.push(evt.target.textContent);
+  console.log(chosenTopics);
+}
+
+  //changes from value to answer to question when clicked. want to add margin/padding to the text in cells so it can be clicked anywhere in cell
 function revealAnswer(evt) {
   console.log(evt.target.className);
   if (evt.target.className == 'answer' || evt.target.className == 'question' || evt.target.className == 'value') {
@@ -214,12 +222,6 @@ function funFun() {
 }
 funFun();
 
-  //pushes the selected topic to the chosenTopics array
-function pushTopic(evt) {
-  console.log(evt.target);
-  chosenTopics.push(evt.target);
-  console.log(chosenTopics);
-}
 
 //gives functionality to the "Let's play" button on the options page. May need to add alert that requires chosenTopics.length === 6
 function removeOptions() {
