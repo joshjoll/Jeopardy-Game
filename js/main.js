@@ -2,7 +2,7 @@
 
 //topics.*topic*.q*#*.*value*
 
-var topics = {
+const topics = {
   HTMLTags: {
     v100: {
       q1: {
@@ -164,21 +164,31 @@ var topics = {
   },
 };
 
-console.log(topics.HTMLTags.v100.q1);
+console.log(topics.HTMLTags.v100.children[0]);
+
+const ids = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6'];
+
 // app's state variables
+var nextTopic =;
+var topics = []; /*need to push topics into this array. Maybe push all qs, as, and values into here*/
 
 // cached element references
 
 // event listeners
 
+  //removes the initial options overlay
 document.getElementById('play').addEventListener('click', removeOptions);
-// document.querySelectorAll('.table-row')[0].addEventListener('click', revealAnswer); /*if row is clicked, deletes last .cell element */
 
+  //cycles through value/answer/question on the board
+document.getElementsByClassName('board')[0].addEventListener('click', revealAnswer);
 
-document.getElementsByClassName('board')[0].addEventListener('click', revealAnswer); /* hides all values when number clicked, but if row is clicked it deletes last .cell element*/
-
-
+//need to add in event listener for the options page for topics
 // functions
+
+//need to randomize the questions picked for each topic. Also need an option for a full randomization
+var random = function() {
+  Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page*/.length
+}
 
 function revealAnswer(evt) {
   console.log(evt.target.className);
@@ -187,20 +197,18 @@ function revealAnswer(evt) {
     evt.target.nextElementSibling.style.display = 'inline';
   } else {
     console.log('Try another square');
-}
+  }
 }
 
-// function revealAnswer() {
-//   this.getElementsByClassName('value')[0].style.display = 'none';
-//   this.getElementsByClassName('answer')[0].style.display = 'inline';
-//   this.addEventListener('click', function() {
-//     this.getElementsByClassName('answer')[0].style.display = 'none';
-//     this.getElementsByClassName('question')[0].style.display = 'inline';
-//     this.addEventListener('click', function() {
-//       this.getElementsByClassName('question')[0].style.display = 'none';
-//     });
-//   });
-// }
+function funFun() {
+  for (let i = 0; i < ids.length; i++) {
+    //add childElement to assign value?
+    document.getElementById(ids[i]).children[0].innerHTML = topics.HTMLTags.v100.q1.value; /*need to replace this with a var/method */
+    
+    // document.querySelector('#ids[i]').innerHTML = topics.HTMLTags.v100.q1.value;
+  }
+}
+funFun();
 
 function removeOptions() {
   document.querySelector('div').style.display = 'none';
