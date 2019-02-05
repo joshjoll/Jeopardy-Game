@@ -1,74 +1,370 @@
 //const
+// topics[i].topic/a/q/value
 
 const topics = [
-  {topic: HTMLTags,
-  a: 'A self closing tag',
-  q: 'what is <img>?',
-  value: '$100',
-  },
-  {topic: HTMLTags,
+  { topic: 'HTML Tags',
   a: 'A self closing tag',
   q: 'what is <img>?',
   value: '$100',
 },
-  {topic: HTMLTags,
+  { topic: 'HTML Tags',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'HTML Tags',
   a: 'A self closing tag',
   q: 'what is <img>?',
   value: '$200',
 },
-  {topic: HTMLTags,
+  { topic: 'HTML Tags',
   a: 'A self closing tag',
   q: 'what is <img>?',
   value: '$200',
 },
-  {topic: HTMLTags,
+  { topic: 'HTML Tags',
   a: 'A self closing tag',
   q: 'what is <img>?',
   value: '$300',
 },
-  {topic: HTMLTags,
+  { topic: 'HTML Tags',
   a: 'A self closing tag',
   q: 'what is <img>?',
   value: '$300',
 },
-  
-
-
-
-  CSSProperties = {
-
-  },
-  arrays = {
-
-  },
-  harry = {
-
-  },
-  gitHub = {
-
-  },
-  loops = {
-
-  },
-  jsFunctions = {
-
-  },
-  jquery = {
-
-  },
+  { topic: 'HTML Tags',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'HTML Tags',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'HTML Tags',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'HTML Tags',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'CSS Properties',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'arrays',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'github',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'loops',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'js Functions',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$100',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$200',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$300',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$400',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
+  { topic: 'jquery',
+  a: 'A self closing tag',
+  q: 'what is <img>?',
+  value: '$500',
+},
 ];
-
 
 const ids = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6'];
 
-const tcells = ['t1', 't2', 't3', 't4', 't5', 't6']
+const tcells = ['t1', 't2', 't3', 't4', 't5', 't6'];
 
 // app's state variables
+  //new array to store first instance of a topic value to push to the options page
+var optionTopics =[];
+var nextTopic;
 
-var nextTopic
-
-//store the topics chosen by the user on option page
-var chosenTopics = []
+  //store the topics chosen by the user on option page
+var chosenTopics = [];
 
 // cached element references
 
@@ -88,43 +384,49 @@ document.querySelector('section').addEventListener('click', pushTopic);
 
 // functions
 
-//need to randomize the questions picked for each topic. Also need an option for a full randomization
-// var random = function() {
-//   Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page.*/.length
-// }
+  //need to randomize the questions picked for each topic. Also need an option for a full randomization
+  // var random = function() {
+  //   Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page.*/.length
+  // }
 
 
-  // should push all first level objects in topics array and create button on the options screen
+  // Works. filters through all titles in Topics array and returns new array with only the first instance of the title. Pushes it to the Options page
 function createChoices() {
   for (let i = 0; i < topics.length; i++) {
-    console.log(topics[i]);
+    if (optionTopics.includes(topics[i].topic)) {
+    } else {
+      optionTopics.push(topics[i].topic)
+    }
+  }
+  console.log(optionTopics);
+  for (let i = 0; i < optionTopics.length; i++) {
+    console.log(topics[i].topic);
     var newDiv = document.createElement('DIV');
-    var newTopic = document.createTextNode(topics[i]);
+    var newTopic = document.createTextNode(optionTopics[i]);
     newDiv.appendChild(newTopic);
     document.querySelector('section').appendChild(newDiv).classList.add('choices');
+
   }
 }
 createChoices();
+
+// function createChoices() {
+//   }
+// }
+// createChoices();
 
 function render() {
 
 }
 
-//needs completely retweaked, but worked
-// function funFun() {
-//   for (let i = 0; i < ids.length; i++) {
-//     //add childElement to assign value?
-//     document.getElementById(ids[i]).children[0].innerHTML = topics.HTMLTags.v100.q1.value; /*need to replace this with a var/method */
-//
-//     // document.querySelector('#ids[i]').innerHTML = topics.HTMLTags.v100.q1.value;
-//   }
-// }
-// funFun();
 
-  //pushes the selected topic to the chosenTopics array. Limits to 6 catgories
+
+  //Broke: Includes the 'Section Div'. pushes the selected topic to the chosenTopics array. Limits to 6 catgories
 function pushTopic(evt) {
+  console.log(evt.target)
   if (evt.target.style.border == '1px solid pink') {
     alert(`Please do not select the same topic twice`)
+  } else if (evt.target.textContent = null) {
   } else if (chosenTopics.length < 6) {
     chosenTopics.push(evt.target.textContent);
     evt.target.style.border = '1px solid pink';
@@ -135,7 +437,7 @@ function pushTopic(evt) {
   }
 }
 
-  //changes from value to answer to question when clicked. want to add margin/padding to the text in cells so it can be clicked anywhere in cell
+  //Works. changes from value to answer to question when clicked. want to add margin/padding to the text in cells so it can be clicked anywhere in cell
 function revealAnswer(evt) {
   if (evt.target.className == 'answer' || evt.target.className == 'question' || evt.target.className == 'value') {
     evt.target.style.display = 'none';
@@ -146,7 +448,7 @@ function revealAnswer(evt) {
 }
 
 
-  //Change to automatically exit options page after six topics are chosen. Change to make border different color if selected. Gives functionality to the "Let's play" button on the options page. Requires user to have 6 categories selected.
+  //Works. Change to automatically exit options page after six topics are chosen. Change to make border different color if selected. Gives functionality to the "Let's play" button on the options page. Requires user to have 6 categories selected.
 function removeOptions() {
   if (chosenTopics.length === 6) {
   document.querySelector('div').style.display = 'none';
