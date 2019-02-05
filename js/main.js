@@ -166,6 +166,8 @@ console.log(topics.HTMLTags.v100.childNodes);
 
 const ids = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6'];
 
+const tcells = ['t1', 't2', 't3', 't4', 't5', 't6']
+
 // app's state variables
 
 var nextTopic
@@ -180,6 +182,9 @@ var chosenTopics = []
   //removes the initial options overlay
 document.getElementById('play').addEventListener('click', removeOptions);
 
+  //pull the topics from the chosenTopics array, finds question category in object, pushes to the board
+document.getElementById('play').addEventListener('click', render);
+
   //cycles through value/answer/question on the board
 document.getElementsByClassName('board')[0].addEventListener('click', revealAnswer);
 
@@ -193,29 +198,13 @@ document.querySelector('section').addEventListener('click', pushTopic);
 //   Math.floor(Math.random() * topics./*need to add an event listener/target in here for the options page.*/.length
 // }
 
-//pushes the selected topic to the chosenTopics array. Limits to 6 catgories
-function pushTopic(evt) {
-  console.log(evt.target);
-  if (chosenTopics.length < 6) {
-    chosenTopics.push(evt.target.textContent);
-    console.log(chosenTopics.length);
-  } else {
-    alert(`You've selected 6 categories. Let's Play`)
+function render() {
+  for (let i = 0; i < chosenTopics.length; i++) {
+
   }
 }
 
-  //changes from value to answer to question when clicked. want to add margin/padding to the text in cells so it can be clicked anywhere in cell
-function revealAnswer(evt) {
-  console.log(evt.target.className);
-  if (evt.target.className == 'answer' || evt.target.className == 'question' || evt.target.className == 'value') {
-    evt.target.style.display = 'none';
-    evt.target.nextElementSibling.style.display = 'inline';
-  } else {
-    console.log('Try another square');
-  }
-}
-
-  //needs completely retweaked, but works
+//needs completely retweaked, but worked
 function funFun() {
   for (let i = 0; i < ids.length; i++) {
     //add childElement to assign value?
@@ -226,8 +215,29 @@ function funFun() {
 }
 funFun();
 
+  //pushes the selected topic to the chosenTopics array. Limits to 6 catgories
+function pushTopic(evt) {
+  if (chosenTopics.length < 6) {
+    chosenTopics.push(evt.target.textContent);
+    let i = chosenTopics.length;
+    document.getElementById('t' + i).textContent = evt.target.textContent;
+  } else {
+    alert(`You've selected 6 categories. Let's Play`)
+  }
+}
 
-//gives functionality to the "Let's play" button on the options page. May need to add alert that requires chosenTopics.length === 6
+  //changes from value to answer to question when clicked. want to add margin/padding to the text in cells so it can be clicked anywhere in cell
+function revealAnswer(evt) {
+  if (evt.target.className == 'answer' || evt.target.className == 'question' || evt.target.className == 'value') {
+    evt.target.style.display = 'none';
+    evt.target.nextElementSibling.style.display = 'inline';
+  } else {
+    console.log('Try another square');
+  }
+}
+
+
+  //Change to automatically exit options page after six topics are chosen. Change to make border different color if selected. Gives functionality to the "Let's play" button on the options page. Requires user to have 6 categories selected.
 function removeOptions() {
   if (chosenTopics.length === 6) {
   document.querySelector('div').style.display = 'none';
