@@ -8,8 +8,8 @@ const topics = [
   value: '$100',
 },
   { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  a: 'this is the second option',
+  q: 'second option',
   value: '$100',
 },
   { topic: 'HTML Tags',
@@ -53,13 +53,13 @@ const topics = [
   value: '$500',
 },
   { topic: 'CSS Properties',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  a: 'this is another option',
+  q: 'also an option',
   value: '$100',
 },
   { topic: 'CSS Properties',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  a: 'plus another one',
+  q: 'more options!',
   value: '$100',
 },
   { topic: 'CSS Properties',
@@ -354,7 +354,7 @@ const topics = [
 },
 ];
 
-const ids = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6'];
+// const ids = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6'];
 
 const tcells = ['t1', 't2', 't3', 't4', 't5', 't6'];
 
@@ -384,20 +384,7 @@ document.querySelector('section').addEventListener('click', pushTopic);
 
 // functions
 
-  //need to randomize the questions picked for each topic. Also need an option for a full randomization
-// function fillBoard() {
-//   var tempArray = [];
-//   for (let i = 0; i < ids.length; i++) {
-//     for (let i = 0; i < 5; i++) {
-//       return temp = chosenTopics[i];
-//     }
-//     if (temp == ids[i].topic && ids[i].value == 100) {
-//       tempArray.push(ids[i]);
-//     }
-//     console.log(tempArray);
-//   }
-// }
-// fillBoard();
+
 
 
 
@@ -409,9 +396,7 @@ function createChoices() {
       optionTopics.push(topics[i].topic)
     }
   }
-  console.log(optionTopics);
   for (let i = 0; i < optionTopics.length; i++) {
-    console.log(topics[i].topic);
     var newDiv = document.createElement('DIV');
     var newTopic = document.createTextNode(optionTopics[i]);
     newDiv.appendChild(newTopic);
@@ -423,8 +408,10 @@ createChoices();
 
 
 
+  //need to randomize the questions picked for each topic. Also need an option for a full randomization
   //DO NOT DELETE. Need to remove from event listner first
 function render() {
+  let p = 1;
   chosenTopics.forEach(function(topic) {
     var tempArray = [];
     for (let i = 0; i < topics.length; i++) {
@@ -432,13 +419,70 @@ function render() {
         tempArray.push(topics[i]);
       }
     }
-    var qsv = tempArray[Math.floor(Math.random() * tempArray.length)];
-    console.log(qsv);
-    document.querySelector('#a[i] .question').textContent = 'qsv.q';
-    document.querySelector('#a[i] .answer').textContent = 'qsv.a';
-  }
-  );
+    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
+    console.log(qav.a);
+    document.querySelector('#a'+p + ' .answer').textContent = qav.a
+    document.querySelector('#a'+p + ' .question').textContent = qav.q;
+    p += 1;
+  });
+  p = 1;
+  chosenTopics.forEach(function(topic) {
+    var tempArray = [];
+    for (let i = 0; i < topics.length; i++) {
+      if (topic == topics[i].topic && topics[i].value == '$200') {
+        tempArray.push(topics[i]);
+      }
+    }
+    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
+    console.log(qav.a);
+    document.querySelector('#b'+p + ' .answer').textContent = qav.a;
+    document.querySelector('#b'+p + ' .question').textContent = qav.q;
+    p += 1;
+  });
+  p = 1;
+  chosenTopics.forEach(function(topic) {
+    var tempArray = [];
+    for (let i = 0; i < topics.length; i++) {
+      if (topic == topics[i].topic && topics[i].value == '$300') {
+        tempArray.push(topics[i]);
+      }
+    }
+    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
+    console.log(qav.a);
+    document.querySelector('#c'+p + ' .answer').textContent = qav.a;
+    document.querySelector('#c'+p + ' .question').textContent = qav.q;
+    p += 1;
+  });
+  p = 1;
+  chosenTopics.forEach(function(topic) {
+    var tempArray = [];
+    for (let i = 0; i < topics.length; i++) {
+      if (topic == topics[i].topic && topics[i].value == '$400') {
+        tempArray.push(topics[i]);
+      }
+    }
+    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
+    console.log(qav.a);
+    document.querySelector('#d'+p + ' .answer').textContent = qav.a;
+    document.querySelector('#d'+p + ' .question').textContent = qav.q;
+    p += 1;
+  });
+  p = 1;
+  chosenTopics.forEach(function(topic) {
+    var tempArray = [];
+    for (let i = 0; i < topics.length; i++) {
+      if (topic == topics[i].topic && topics[i].value == '$500') {
+        tempArray.push(topics[i]);
+      }
+    }
+    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
+    console.log(qav.a);
+    document.querySelector('#e'+p + ' .answer').textContent = qav.a;
+    document.querySelector('#e'+p + ' .question').textContent = qav.q;
+    p += 1;
+  });
 }
+
 
   //pushes the selected topic to the chosenTopics array. Limits to 6 catgories
 function pushTopic(evt) {
