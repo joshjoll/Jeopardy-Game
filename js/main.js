@@ -361,7 +361,7 @@ const tcells = ['t1', 't2', 't3', 't4', 't5', 't6'];
 // app's state variables
   //new array to store first instance of a topic value to push to the options page
 var optionTopics =[];
-var nextTopic;
+
 
   //store the topics chosen by the user on option page
 var chosenTopics = [];
@@ -386,10 +386,20 @@ document.querySelector('section').addEventListener('click', pushTopic);
 
   //need to randomize the questions picked for each topic. Also need an option for a full randomization
 // function fillBoard() {
-//   for (let i = 0; i < 6; i++) {
-//
-//   }zz
+//   var tempArray = [];
+//   for (let i = 0; i < ids.length; i++) {
+//     for (let i = 0; i < 5; i++) {
+//       return temp = chosenTopics[i];
+//     }
+//     if (temp == ids[i].topic && ids[i].value == 100) {
+//       tempArray.push(ids[i]);
+//     }
+//     console.log(tempArray);
+//   }
 // }
+// fillBoard();
+
+
 
   // Works. future change add random button that fills the chosenTopics array. filters through all titles in Topics array and returns new array with only the first instance of the title. Pushes it to the Options page
 function createChoices() {
@@ -415,7 +425,19 @@ createChoices();
 
   //DO NOT DELETE. Need to remove from event listner first
 function render() {
-
+  chosenTopics.forEach(function(topic) {
+    var tempArray = [];
+    for (let i = 0; i < topics.length; i++) {
+      if (topic == topics[i].topic && topics[i].value == '$100') {
+        tempArray.push(topics[i]);
+      }
+    }
+    var qsv = tempArray[Math.floor(Math.random() * tempArray.length)];
+    console.log(qsv);
+    document.querySelector('#a[i] .question').textContent = 'qsv.q';
+    document.querySelector('#a[i] .answer').textContent = 'qsv.a';
+  }
+  );
 }
 
   //pushes the selected topic to the chosenTopics array. Limits to 6 catgories
