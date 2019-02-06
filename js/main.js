@@ -2,54 +2,54 @@
 // topics[i].topic/a/q/value
 
 const topics = [
-  { topic: 'HTML Tags',
+  { topic: 'HTML',
   a: 'A self closing tag',
   q: 'what is <img>?',
   value: '$100',
 },
-  { topic: 'HTML Tags',
-  a: 'this is the second option',
-  q: 'second option',
+  { topic: 'HTML',
+  a: 'HTML Stands For',
+  q: 'What is Hyper Text Markup Language?',
   value: '$100',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'The largest heading tag',
+  q: 'What is <h1>?',
   value: '$200',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'Inserts a line break',
+  q: 'What is <br>?',
   value: '$200',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'Opens a link in a new tab',
+  q: 'What is target="_blank"?',
   value: '$300',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'An identifier used for multiple elements',
+  q: 'What is a class?',
   value: '$300',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'Displays text describing an image',
+  q: 'What is alt?',
   value: '$400',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'Content for a side of a body',
+  q: 'What is <aside>?',
   value: '$400',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'Tag indicating JS',
+  q: 'What is <script>?',
   value: '$500',
 },
-  { topic: 'HTML Tags',
-  a: 'A self closing tag',
-  q: 'what is <img>?',
+  { topic: 'HTML',
+  a: 'Inventor of HTML',
+  q: 'Who is Tim Berners-Lee?',
   value: '$500',
 },
   { topic: 'CSS Properties',
@@ -421,6 +421,7 @@ function render() {
     }
     var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
     console.log(qav.a);
+    document.querySelector('#a'+p + ' .value').textContent = qav.value;
     document.querySelector('#a'+p + ' .answer').textContent = qav.a
     document.querySelector('#a'+p + ' .question').textContent = qav.q;
     p += 1;
@@ -489,7 +490,22 @@ function pushTopic(evt) {
     if (chosenTopics.length > 5) {
     alert(`You've already selected 6 categories. Let's Play!`);
   } else if (evt.target.style.border == '1px solid pink') {
-    alert(`Please do not select the same topic twice`);
+    evt.target.style.border = '1px solid black';
+    let num = chosenTopics.indexOf(evt.target.textContent)
+    chosenTopics.splice(num, 1);
+    // let i = chosenTopics.length;
+    // console.log(chosenTopics);
+    // console.log(chosenTopics.length);
+    // if (document.getElementById('t' + i ).textContent === evt.target.textContent) {
+    //   document.getElementById('t' + i).textContent = 'Jeopardy'
+    for (let i = 0; i < chosenTopics.length; i++) {
+      document.getElementById('t' + i + 1).textContent = chosenTopics[i];
+      for (let i = chosenTopics.length; i < 6; i++) {
+        document.getElementById('t' + i + 1).textContent = 'Jeopardy';
+      }
+    }
+    // document.getElementById('t' + i).textContent = evt.target.textContent;
+    // alert(`Please do not select the same topic twice`);
   } else if (evt.target.className !== 'choices') {
     console.log('not an option');
   } else if (chosenTopics.length < 6) {

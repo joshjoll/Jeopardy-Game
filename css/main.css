@@ -21,6 +21,7 @@
 section {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 .choices {
@@ -34,6 +35,7 @@ section {
   margin: 5px;
   padding: 5px;
   color: white;
+
 }
 
 #play {
