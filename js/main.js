@@ -4,12 +4,12 @@
 const topics = [
   { topic: 'HTML',
   a: 'A self closing tag',
-  q: 'what is <img>?',
+  q: 'what is <img>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?',
   value: '$100',
 },
   { topic: 'HTML',
   a: 'HTML Stands For',
-  q: 'What is Hyper Text Markup Language?',
+  q: 'What is Hyper Text Markup Languageaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?',
   value: '$100',
 },
   { topic: 'HTML',
@@ -24,7 +24,7 @@ const topics = [
 },
   { topic: 'HTML',
   a: 'Opens a link in a new tab',
-  q: 'What is target="_blank"?',
+  q: 'What is target= "_blank"?',
   value: '$300',
 },
   { topic: 'HTML',
@@ -385,10 +385,7 @@ document.querySelector('section').addEventListener('click', pushTopic);
 // functions
 
 
-
-
-
-  // Works. future change add random button that fills the chosenTopics array. filters through all titles in Topics array and returns new array with only the first instance of the title. Pushes it to the Options page
+  // Works.  filters through all titles in Topics array and returns new array with only the first instance of the title. Pushes it to the Options page
 function createChoices() {
   for (let i = 0; i < topics.length; i++) {
     if (optionTopics.includes(topics[i].topic)) {
@@ -408,8 +405,7 @@ createChoices();
 
 
 
-  //need to randomize the questions picked for each topic. Also need an option for a full randomization
-  //DO NOT DELETE. Need to remove from event listner first
+  //Add an option for a full randomization. Possibly consolidate to 1 function for full render. Filters all question topics from topics array, randomizes answers/questions, and pushes it to the board.
 function render() {
   let p = 1;
   chosenTopics.forEach(function(topic) {
@@ -420,9 +416,7 @@ function render() {
       }
     }
     var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
-    console.log(qav.a);
-    document.querySelector('#a'+p + ' .value').textContent = qav.value;
-    document.querySelector('#a'+p + ' .answer').textContent = qav.a
+    document.querySelector('#a'+p + ' .answer').textContent = qav.a;
     document.querySelector('#a'+p + ' .question').textContent = qav.q;
     p += 1;
   });
@@ -485,28 +479,22 @@ function render() {
 }
 
 
-  //pushes the selected topic to the chosenTopics array. Limits to 6 catgories
+  //Currently Broken: trying to add an option to un-click a topic. Add button to reset chosenTopics array if I can't fix the first sentence. future change add random button that fills the chosenTopics array. pushes the selected topic to the chosenTopics array. Limits to 6 catgories
 function pushTopic(evt) {
-    if (chosenTopics.length > 5) {
-    alert(`You've already selected 6 categories. Let's Play!`);
-  } else if (evt.target.style.border == '1px solid pink') {
+    if (evt.target.style.border == '1px solid pink') {
     evt.target.style.border = '1px solid black';
     let num = chosenTopics.indexOf(evt.target.textContent)
     chosenTopics.splice(num, 1);
-    // let i = chosenTopics.length;
-    // console.log(chosenTopics);
-    // console.log(chosenTopics.length);
-    // if (document.getElementById('t' + i ).textContent === evt.target.textContent) {
-    //   document.getElementById('t' + i).textContent = 'Jeopardy'
-    for (let i = 0; i < chosenTopics.length; i++) {
-      document.getElementById('t' + i + 1).textContent = chosenTopics[i];
-      for (let i = chosenTopics.length; i < 6; i++) {
-        document.getElementById('t' + i + 1).textContent = 'Jeopardy';
-      }
+    for (let i = 1 ; i <= 6; i++) {
+      document.getElementById('t' + i).textContent = 'Jeopardy';
     }
-    // document.getElementById('t' + i).textContent = evt.target.textContent;
-    // alert(`Please do not select the same topic twice`);
-  } else if (evt.target.className !== 'choices') {
+    for (let i = 0; i < chosenTopics.length; i++) {
+        document.getElementById('t' + (i + 1)).textContent = chosenTopics[i];
+
+      }
+  } else if (chosenTopics.length > 5) {
+  alert(`You've already selected 6 categories. Let's Play!`);
+  }else if (evt.target.className !== 'choices') {
     console.log('not an option');
   } else if (chosenTopics.length < 6) {
     chosenTopics.push(evt.target.textContent);
@@ -527,7 +515,7 @@ function revealAnswer(evt) {
 }
 
 
-  //Works. future change to automatically exit options page after six topics are chosen. Gives functionality to the "Let's play" button on the options page. Requires user to have 6 categories selected.
+  //Add button to reset chosenTopics array. Gives functionality to the "Let's play" button on the options page. Requires user to have 6 categories selected.
 function removeOptions() {
   if (chosenTopics.length === 6) {
   document.querySelector('div').style.display = 'none';

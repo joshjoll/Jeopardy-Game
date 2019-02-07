@@ -1,10 +1,15 @@
-* {
+
+html {
   box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 
 #optionPage {
   position: fixed;
-  display: ;
+  display: none;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -47,9 +52,26 @@ section {
   margin: 20px;
 }
 
-.board {
-  border: 20px solid grey;
+.title {
+  color: white;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 3px 3px 6px black;
+  font-size: 50px;
   background-color: rgb(6, 12, 233);
+  padding-bottom: 5px;
+  text-align: center;
+  border-top: 10px solid grey;
+  border-left: 10px solid grey;
+  border-right: 10px solid grey
+}
+
+.board {
+  border-left: 10px solid grey;
+  border-right: 10px solid grey;
+  border-bottom: 10px solid grey;
+  border-top: 10px solid grey;
+  background-color: rgb(6, 12, 233);
+  margin-left: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
@@ -64,7 +86,6 @@ section {
   ;
 }
 .topic-row {
-  border-top: 2px solid black;
   border-bottom: 5px solid black;
   text-align: center;
 }
@@ -78,26 +99,30 @@ section {
 .tcell {
   border-right: 2px solid black;
   color: white;
-  font-size: 20px;
-  align-items:center
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'helvetica narrow', serif;
+  text-shadow: 1px 1px 4px black;
+  /* margin-top: auto;
+  margin-bottom: auto; */
 }
 
-.title {
-  color: red;
-  background-color: white;
-  text-align: center;
-}
 
 .value {
-  color: rgb(187, 193, 84);
+  color: rgb(255, 204, 0);
+  font-family: helvetica;
+  text-shadow: 4px 4px 4px black;
+  font-size: 40px;
 }
-.answer {
+.answer, .question {
   color: white;
   display: none;
-}
-.question {
-  color: white;
-  display: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'helvetica narrow', serif;
+  text-shadow: 1px 1px 4px black;
+  word-wrap: break-word;
+  word-break: normal;
 }
 
 .topic{
@@ -149,4 +174,18 @@ section {
   grid-template-rows: 80px;
   grid-template-areas:
   "e1 e2 e3 e4 e5 e6";
+}
+
+@media only screen and (max-width: 760px) {
+  .answer, .question {
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+  .tcell {
+    font-size: 18px;
+    word-wrap: break-word;
+  }
+  body {
+    width:700px;
+  }
 }
