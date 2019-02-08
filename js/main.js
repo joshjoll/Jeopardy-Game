@@ -475,7 +475,7 @@ function render() {
 }
 
 
-  //Currently Broken: trying to add an option to un-click a topic. Add button to reset chosenTopics array if I can't fix the first sentence. future change add random button that fills the chosenTopics array. pushes the selected topic to the chosenTopics array. Limits to 6 catgories
+  //Add button to reset chosenTopics array. future change add random button that fills the chosenTopics array. pushes the selected topic to the chosenTopics array. Limits to 6 catgories
 function pushTopic(evt) {
     if (evt.target.style.border == '1px solid pink') {
     evt.target.style.border = '1px solid black';
