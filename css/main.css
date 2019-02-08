@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  max-width: 1219px;
+  max-width: 1112px;
   margin: auto;
 }
 
@@ -65,8 +65,12 @@ section {
 }
 img {
   max-width:100%;
-  max-height:100%;
+  max-height: 100%
   /* object-fit: cover; */
+}
+#opener {
+  max-height: 220px;
+  margin-bottom: 50px;
 }
 h2 {
   margin: 0;
@@ -113,11 +117,10 @@ h2 {
   border-right: 2px solid black;
   color: white;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 20px;
   font-family: 'helvetica narrow', serif;
   text-shadow: 1px 1px 4px black;
   margin: 0;
-  vertical-align: middle;
 }
 .cell {
   border-right: 2px solid black;
@@ -196,7 +199,10 @@ h2 {
   body {
     width:700px;
   }
-  img {
+  #opener{
     width: 680px;
+  }
+  img {
+    min-width: 680px;
   }
 }
