@@ -70,8 +70,7 @@ img {
 }
 h2 {
   margin: 0;
-  word-wrap: break-word;
-  word-break: normal;
+
 }
 
 .board {
@@ -82,68 +81,18 @@ h2 {
   background-color: rgb(6, 12, 233);
   margin-left: 0;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows:  80px 80px 80px 80px 80px 80px;
-
   grid-template-areas:
-    "category"
-    "v100"
-    "v200"
-    "v300"
-    "v400"
-    "v500"
+    "t1 t2 t3 t4 t5 t6"
+    "a1 a2 a3 a4 a5 a6"
+    "b1 b2 b3 b4 b5 b6"
+    "c1 c2 c3 c4 c5 c6"
+    "d1 d2 d3 d4 d5 d6"
+    "e1 e2 e3 e4 e5 e6"
   ;
 }
-.topic-row {
-  /* border-bottom: 5px solid black; */
-  text-align: center;
-  grid-area: "category";
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 80px;
-  grid-template-areas:
-  "t1 t2 t3 t4 t5 t6";
-}
-
-.table-row {
-  border-top: 5px solid black;
-  text-align: center;
-}
-.tcell {
-  border-right: 2px solid black;
-  color: white;
-  text-transform: uppercase;
-  font-size: 32px;
-  font-family: 'helvetica narrow', serif;
-  text-shadow: 1px 1px 4px black;
-  margin: 0;
-  vertical-align: middle;
-}
-.cell {
-  border-right: 2px solid black;
-  text-align: center
-  height: 80px;
-  max-width: 185.5px;
-
-}
-
-
-.value {
-  color: rgb(255, 204, 0);
-  font-family: helvetica;
-  text-shadow: 4px 4px 4px black;
-  font-size: 40px;
-}
-.answer, .question {
-  color: white;
-  display: none;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-family: 'helvetica narrow', serif;
-  text-shadow: 1px 1px 4px black;
-}
-
-.v100 {
+/* .v100 {
   grid-area: "100";
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -182,6 +131,51 @@ h2 {
   grid-template-rows: 80px;
   grid-template-areas:
   "e1 e2 e3 e4 e5 e6";
+}*/
+
+.topic-row {
+ border-bottom: 5px solid black;
+  text-align: center;
+  
+}
+.tcell {
+  border-right: 2px solid black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'helvetica narrow', serif;
+  text-shadow: 1px 1px 4px black;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.table-row {
+  border-top: 5px solid black;
+  text-align: center;
+}
+.cell {
+  border-right: 2px solid black;
+  text-align: center
+  word-wrap: break-word;
+  word-break: normal;
+  height: 80px;
+
+}
+
+
+.value {
+  color: rgb(255, 204, 0);
+  font-family: helvetica;
+  text-shadow: 4px 4px 4px black;
+  font-size: 40px;
+}
+.answer, .question {
+  color: white;
+  display: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'helvetica narrow', serif;
+  text-shadow: 1px 1px 4px black;
 }
 
 @media only screen and (max-width: 760px) {
