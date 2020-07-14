@@ -2,14 +2,14 @@
 
 # Jeopardy-Game
 
-Jeopardy is a long running trivia based TV show that allows 3 contestants to compete in answering questions correctly. Contestants pick questions from different categories, each with different point value assigned to it. After the player picks a cell from the board, the answer to the question is revealed, and it is up to the player to provide the correct question.
+Jeopardy is a long running trivia based TV show that allows contestants to compete in answering questions correctly. Contestants pick questions from different categories, each with different point value assigned to it. After the player picks a cell from the board, the answer to the question is revealed, and it is up to the player to provide the correct question.
 
 <img src="screenshot 1.png">
 
 
 ## Technologies Used
 
-This game uses only the following languages, and should be supported in most browsers:
+This game uses only the following languages, and should be able to be played in most browsers by downloading the repository and opening the HTML locally in the browser:
 1. HTML
 1. CSS
 1. Javascript
@@ -17,7 +17,7 @@ This game uses only the following languages, and should be supported in most bro
 
 ## Play Here!
 
-You can find the game here. It is currently not structured with win-loss criteria, but we hope to add it in the near future.
+You can find the game here.
 
 male-plant.surge.sh
 
