@@ -1,358 +1,339 @@
 //const
 // topics[i].topic/a/q/value
 
-const topics = [
-  { topic: 'HTML',
-  a: 'A closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'HTML',
-  a: 'HTML Stands For',
-  q: 'What is Hyper Text Markup Language?',
-  value: '$100',
-},
-  { topic: 'HTML',
-  a: 'The largest heading tag',
-  q: 'What is <h1>?',
-  value: '$200',
-},
-  { topic: 'HTML',
-  a: 'Inserts a line break',
-  q: 'What is <br>?',
-  value: '$200',
-},
-  { topic: 'HTML',
-  a: 'Opens a link in a new tab',
-  q: 'What is target= "_blank"?',
-  value: '$300',
-},
-  { topic: 'HTML',
-  a: 'An identifier used for multiple elements',
-  q: 'What is a class?',
-  value: '$300',
-},
-  { topic: 'HTML',
-  a: 'Displays text describing an image',
-  q: 'What is alt?',
-  value: '$400',
-},
-  { topic: 'HTML',
-  a: 'Content for a side of a body',
-  q: 'What is <aside>?',
-  value: '$400',
-},
-  { topic: 'HTML',
-  a: 'Tag indicating JS',
-  q: 'What is <script>?',
-  value: '$500',
-},
-  { topic: 'HTML',
-  a: 'Inventor of HTML',
-  q: 'Who is Tim Berners-Lee?',
-  value: '$500',
-},
-  { topic: 'CSS Properties',
-  a: 'Changes the text size of an element',
-  q: 'What is font-size?',
-  value: '$100',
-},
-  { topic: 'CSS Properties',
-  a: 'Cascading Style Sheets',
-  q: 'What is CSS?',
-  value: '$100',
-},
-  { topic: 'CSS Properties',
-  a: 'Adds space between content and border',
-  q: 'What is padding?',
-  value: '$200',
-},
-  { topic: 'CSS Properties',
-  a: 'Preferred method to style an element',
-  q: 'What is an External Style Sheet??',
-  value: '$200',
-},
-  { topic: 'CSS Properties',
-  a: 'Positions an element right in its container',
-  q: 'What is float: right?',
-  value: '$300',
-},
-  { topic: 'CSS Properties',
-  a: 'A self closing tag',
-  q: 'Option 5?',
-  value: '$300',
-},
-  { topic: 'CSS Properties',
-  a: 'PseudoClass that reads user mouse postion',
-  q: 'What is :hover?',
-  value: '$400',
-},
-  { topic: 'CSS Properties',
-  a: 'Uses an . to style an element',
-  q: 'What is a class?',
-  value: '$400',
-},
-  { topic: 'CSS Properties',
-  a: 'Uses a # to style an element',
-  q: 'What is an ID?',
-  value: '$500',
-},
-  { topic: 'CSS Properties',
-  a: 'Forces elements to line up horizontally',
-  q: 'What is display: inline?',
-  value: '$500',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-  { topic: 'Arrays',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-  { topic: 'Github',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-  { topic: 'Loops',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-  { topic: 'JavaScript',
-  a: 'Cycles through each item in an array',
-  q: 'What is forEach?',
-  value: '$100',
-},
-  { topic: 'JavaScript',
-  a: 'Returns a single value from an array',
-  q: 'What is reduce?',
-  value: '$100',
-},
-  { topic: 'JavaScript',
-  a: 'Returns index of item requested',
-  q: 'What is findIndex?',
-  value: '$200',
-},
-  { topic: 'JavaScript',
-  a: 'Type of bracket used in an object',
-  q: 'What is a curly bracket?',
-  value: '$200',
-},
-  { topic: 'JavaScript',
-  a: 'Type of bracket used in an array',
-  q: 'What is a square bracket?',
-  value: '$300',
-},
-  { topic: 'JavaScript',
-  a: 'Stores a variable that cant be changed',
-  q: 'What is a const?',
-  value: '$300',
-},
-  { topic: 'JavaScript',
-  a: 'An object that listens for user actions',
-  q: 'What is an event listener?',
-  value: '$400',
-},
-  { topic: 'JavaScript',
-  a: 'Method that adds value to end of an array',
-  q: 'What is push?',
-  value: '$400',
-},
-  { topic: 'JavaScript',
-  a: 'Method that removes value to end of an array',
-  q: 'What is pop?',
-  value: '$500',
-},
-  { topic: 'JavaScript',
-  a: 'An operator used to set a new value',
-  q: 'What is =?',
-  value: '$500',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$100',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$200',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$300',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$400',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-  { topic: 'Jquery',
-  a: 'A self closing tag',
-  q: 'A self closing tag?',
-  value: '$500',
-},
-];
+const questions = {
+  'HTML': {
+    100: [
+      {
+        a: 'Provides bold font to text',
+        q: 'What is <strong>?',
+      },{
+        a: 'HTML Stands For',
+        q: 'What is Hyper Text Markup Language?',
+      }
+    ],
+    200: [
+      {
+        a: 'The largest heading tag',
+        q: 'What is <h1>?',
+      },{
+        a: 'Inserts a line break',
+        q: 'What is <br>?',
+      }
+    ],
+    300: [
+      {
+        a: 'Opens a link in a new tab',
+        q: 'What is target= "_blank"?',
+      },{
+        a: 'An identifier used for multiple elements',
+        q: 'What is a class?',
+      }
+    ],
+    400: [
+      {
+        a: 'Displays text describing an image',
+        q: 'What is alt?',
+      },{
+        a: 'Content for a side of a body',
+        q: 'What is <aside>?',
+      }
+    ],
+    500: [
+      {
+        a: 'Tag indicating JS',
+        q: 'What is <script>?',
+      },{
+        a: 'Inventor of HTML',
+        q: 'Who is Tim Berners-Lee?',
+      }
+    ],
+  },
+  'CSS Properties': {
+    100: [
+      {
+        a: 'Changes the text size of an element',
+        q: 'What is font-size?',
+      },{
+        a: 'Cascading Style Sheets',
+        q: 'What is CSS?',
+      }
+    ],
+    200: [
+      {
+        a: 'Adds space between content and border',
+        q: 'What is padding?',
+      },{
+        a: 'Preferred method to style an element',
+        q: 'What is an External Style Sheet??',
+      }
+    ],
+    300: [
+      {
+        a: 'Positions an element right in its container',
+        q: 'What is float: right?',
+      },{
+        // help
+        a: 'A self closing tag',
+        q: 'Option 5?',
+      }
+    ],
+    400: [
+      {
+        a: 'PseudoClass that reads user mouse postion',
+        q: 'What is :hover?',
+      },{
+        a: 'Uses an . to style an element',
+        q: 'What is a class?',
+      }
+    ],
+    500: [
+      {
+        a: 'Uses a # to style an element',
+        q: 'What is an ID?',
+      },{
+        a: 'Forces elements to line up horizontally',
+        q: 'What is display: inline?',
+      }
+    ],
+  },
+  'JavaScript': {
+    100: [
+      {
+        a: 'Cycles through each item in an array',
+        q: 'What is forEach?',
+      },{
+        a: 'Returns a single value from an array',
+        q: 'What is reduce?',
+      }
+    ],
+    200: [
+      {
+        a: 'Returns index of item requested',
+        q: 'What is findIndex?',
+      },{
+        a: 'Type of bracket used in an object',
+        q: 'What is a curly bracket?',
+      }
+    ],
+    300: [
+      {
+        a: 'Type of bracket used in an array',
+        q: 'What is a square bracket?',
+      },{
+        a: 'Stores a variable that cant be changed',
+        q: 'What is a const?',
+      }
+    ],
+    400: [
+      {
+        a: 'An object that listens for user actions',
+        q: 'What is an event listener?',
+      },{
+        a: 'Method that adds value to end of an array',
+        q: 'What is push?',
+      }
+    ],
+    500: [
+      {
+        a: 'Method that removes at the end of an array',
+        q: 'What is pop?',
+      },{
+        a: 'An operator used to set a new value',
+        q: 'What is =?',
+      }
+    ],
+  },
+  'Dumb Jokes': {
+    100: [
+      {
+        a: 'Nothing he just waved',
+        q: 'What did the flag say?',
+      },{
+        a: 'Meet you at the corner',
+        q: 'What did the wall say?',
+      }
+    ],
+    200: [
+      {
+        a: 'Buh-dum-Tss',
+        q: 'What is a snare drum and a cymbol?',
+      },{
+        a: 'Elliphino',
+        q: 'What is a mix between a rhino and an elephant?',
+      }
+    ],
+    300: [
+      {
+        a: 'He needed a little space',
+        q: 'What is a claustrophobic astronaut?',
+      },{
+        a: 'An identifier used for multiple elements',
+        q: 'What is a class?',
+      }
+    ],
+    400: [
+      {
+        a: 'Throw him in the mainstream',
+        q: 'How do you drown a hipster?',
+      },{
+        a: 'Gets jalapeno business',
+        q: 'What does a nosy pepper do?',
+      }
+    ],
+    500: [
+      {
+        a: 'Someone elses cheese',
+        q: 'What is Nacho Cheese?',
+      },{
+        a: 'She had a bad code',
+        q: 'Why the developer called in sick?',
+      }
+    ],
+  },
+  'Josh Trivia': {
+    100: [
+      {
+        a: 'Josh was born here',
+        q: 'Where is Pittsburgh?',
+      },{
+        a: 'Josh lives here',
+        q: 'Where is Austin?',
+      }
+    ],
+    200: [
+      {
+        // help
+        a: 'National Parks',
+        q: 'What is Joshs favorite vacations?',
+      },{
+        a: 'Joshs favorite word to use as a password',
+        q: 'What is *********?',
+      }
+    ],
+    300: [
+      {
+        a: 'Josh identifies as this kitchen utensil',
+        q: 'What is a wooden spoon?',
+      },{
+        a: 'Josh wanted to be this as a child',
+        q: 'What is a firefighter?',
+      }
+    ],
+    400: [
+      {
+        a: 'The number of cars Josh has owned',
+        q: 'What is 2?',
+      },{
+        a: 'This is joshs favorite beverage',
+        q: 'What is water?',
+      }
+    ],
+    500: [
+      {
+        a: 'This is the first web game Josh made on his own',
+        q: 'What is Jeopardy?',
+      },{
+        a: 'Joshs favorite type of food',
+        q: 'What is Barbecue?',
+      }
+    ],
+  },
+  '5': {
+    100: [
+      {
+        a: 'Provides bold font to text',
+        q: 'What is <strong>?',
+      },{
+        a: 'HTML Stands For',
+        q: 'What is Hyper Text Markup Language?',
+      }
+    ],
+    200: [
+      {
+        a: 'The largest heading tag',
+        q: 'What is <h1>?',
+      },{
+        a: 'Inserts a line break',
+        q: 'What is <br>?',
+      }
+    ],
+    300: [
+      {
+        a: 'Opens a link in a new tab',
+        q: 'What is target= "_blank"?',
+      },{
+        a: 'An identifier used for multiple elements',
+        q: 'What is a class?',
+      }
+    ],
+    400: [
+      {
+        a: 'Displays text describing an image',
+        q: 'What is alt?',
+      },{
+        a: 'Content for a side of a body',
+        q: 'What is <aside>?',
+      }
+    ],
+    500: [
+      {
+        a: 'Tag indicating JS',
+        q: 'What is <script>?',
+      },{
+        a: 'Inventor of HTML',
+        q: 'Who is Tim Berners-Lee?',
+      }
+    ],
+  },
+  '6': {
+    100: [
+      {
+        a: 'Provides bold font to text',
+        q: 'What is <strong>?',
+      },{
+        a: 'HTML Stands For',
+        q: 'What is Hyper Text Markup Language?',
+      }
+    ],
+    200: [
+      {
+        a: 'The largest heading tag',
+        q: 'What is <h1>?',
+      },{
+        a: 'Inserts a line break',
+        q: 'What is <br>?',
+      }
+    ],
+    300: [
+      {
+        a: 'Opens a link in a new tab',
+        q: 'What is target= "_blank"?',
+      },{
+        a: 'An identifier used for multiple elements',
+        q: 'What is a class?',
+      }
+    ],
+    400: [
+      {
+        a: 'Displays text describing an image',
+        q: 'What is alt?',
+      },{
+        a: 'Content for a side of a body',
+        q: 'What is <aside>?',
+      }
+    ],
+    500: [
+      {
+        a: 'Tag indicating JS',
+        q: 'What is <script>?',
+      },{
+        a: 'Inventor of HTML',
+        q: 'Who is Tim Berners-Lee?',
+      }
+    ],
+  },
+}
 
 // app's state variables
   //new array to store first instance of a topic value to push to the options page
