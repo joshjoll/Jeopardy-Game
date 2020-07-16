@@ -381,77 +381,21 @@ createChoices();
 
 
 
-  //Add an option for a full randomization. Possibly consolidate to 1 function for full render. Filters all question topics from topics array, randomizes answers/questions, and pushes it to the board.
+  //Should add an option for a full randomization. Possibly consolidate to 1 function for full render. Filters all question topics from topics array, randomizes answers/questions, and pushes it to the board.
 function render() {
-  let p = 1;
-  chosenTopics.forEach(function(topic) {
-    var tempArray = [];
-    for (let i = 0; i < topics.length; i++) {
-      if (topic == topics[i].topic && topics[i].value == '$100') {
-        tempArray.push(topics[i]);
-      }
+  alph = 'abcdefghijklmnopqrstuvwxyz'
+  let col = 1
+  chosenTopics.forEach(function(topic){
+    cat = questions[topic]
+    let row = 0
+    for (const [key, value] of Object.entries(cat)) {
+      var qav = value[Math.floor(Math.random() * value.length)];
+      document.querySelector('#'+alph[row]+col + ' .answer').textContent = qav.a;
+      document.querySelector('#'+alph[row]+col + ' .question').textContent = qav.q;
+      row += 1
     }
-    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
-    document.querySelector('#a'+p + ' .answer').textContent = qav.a;
-    document.querySelector('#a'+p + ' .question').textContent = qav.q;
-    p += 1;
-  });
-  p = 1;
-  chosenTopics.forEach(function(topic) {
-    var tempArray = [];
-    for (let i = 0; i < topics.length; i++) {
-      if (topic == topics[i].topic && topics[i].value == '$200') {
-        tempArray.push(topics[i]);
-      }
-    }
-    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
-    console.log(qav.a);
-    document.querySelector('#b'+p + ' .answer').textContent = qav.a;
-    document.querySelector('#b'+p + ' .question').textContent = qav.q;
-    p += 1;
-  });
-  p = 1;
-  chosenTopics.forEach(function(topic) {
-    var tempArray = [];
-    for (let i = 0; i < topics.length; i++) {
-      if (topic == topics[i].topic && topics[i].value == '$300') {
-        tempArray.push(topics[i]);
-      }
-    }
-    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
-    console.log(qav.a);
-    document.querySelector('#c'+p + ' .answer').textContent = qav.a;
-    document.querySelector('#c'+p + ' .question').textContent = qav.q;
-    p += 1;
-  });
-  p = 1;
-  chosenTopics.forEach(function(topic) {
-    var tempArray = [];
-    for (let i = 0; i < topics.length; i++) {
-      if (topic == topics[i].topic && topics[i].value == '$400') {
-        tempArray.push(topics[i]);
-      }
-    }
-    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
-    console.log(qav.a);
-    document.querySelector('#d'+p + ' .answer').textContent = qav.a;
-    document.querySelector('#d'+p + ' .question').textContent = qav.q;
-    p += 1;
-  });
-  p = 1;
-  chosenTopics.forEach(function(topic) {
-    var tempArray = [];
-    for (let i = 0; i < topics.length; i++) {
-      if (topic == topics[i].topic && topics[i].value == '$500') {
-        tempArray.push(topics[i]);
-      }
-    }
-    var qav = tempArray[Math.floor(Math.random() * tempArray.length)];
-    console.log(qav.a);
-    document.querySelector('#e'+p + ' .answer').textContent = qav.a;
-    document.querySelector('#e'+p + ' .question').textContent = qav.q;
-    p += 1;
-  });
+    col += 1
+  })
 }
 
 
