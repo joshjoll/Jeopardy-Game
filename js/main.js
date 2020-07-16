@@ -362,12 +362,11 @@ document.querySelector('section').addEventListener('click', pushTopic);
 // functions
 
 
-  // Works.  filters through all titles in Topics array and returns new array with only the first instance of the title. Pushes it to the Options page
+  // loops through entries in questions object and appends the key to the topicOptions array
 function createChoices() {
-  for (let i = 0; i < topics.length; i++) {
-    if (optionTopics.includes(topics[i].topic)) {
-    } else {
-      optionTopics.push(topics[i].topic)
+  for (const [key, value] of Object.entries(questions)) {
+    if (!optionTopics.includes(key)){
+      optionTopics.push(key)
     }
   }
   for (let i = 0; i < optionTopics.length; i++) {
